@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import imageUrlBuilder from '@sanity/image-url'
-import styles from './Figure.module.css'
-import client from '../client'
+import React from 'react';
+import PropTypes from 'prop-types';
+import imageUrlBuilder from '@sanity/image-url';
+import styles from './Figure.module.css';
+import client from '../client';
 
-const builder = imageUrlBuilder(client)
+const builder = imageUrlBuilder(client);
 
-function Figure ({node}) {
-  const {alt, caption, asset} = node
+function Figure({node}) {
+  const {alt, caption, asset} = node;
   if (!asset) {
-    return undefined
+    return undefined;
   }
   return (
     <figure className={styles.content}>
@@ -32,7 +32,7 @@ function Figure ({node}) {
         </figcaption>
       )}
     </figure>
-  )
+  );
 }
 
 Figure.propTypes = {
@@ -40,8 +40,8 @@ Figure.propTypes = {
     alt: PropTypes.string,
     caption: PropTypes.string,
     asset: PropTypes.shape({
-      _ref: PropTypes.string
-    })
-  })
-}
-export default Figure
+      _ref: PropTypes.string,
+    }),
+  }),
+};
+export default Figure;
