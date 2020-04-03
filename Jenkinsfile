@@ -31,9 +31,10 @@ ace(opts) {
     }
   }
 
-  stage('Test') {
+  stage('Lint') {
     milestone()
     docker.image(nodeImage).inside(args) {
       sh 'npm run lint'
     }
+  }
 }
