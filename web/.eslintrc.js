@@ -1,7 +1,8 @@
 module.exports = {
   extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings', 'airbnb', 'airbnb/hooks'],
   rules: {
-    'object-curly-spacing': ['error', 'never']
+    'object-curly-spacing': ['error', 'never'],
+    'react/jsx-filename-extension': [1, { 'extensions': ['.tsx'] }]
   },
   settings: {
     react: {
