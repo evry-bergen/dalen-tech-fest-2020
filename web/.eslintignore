@@ -1,3 +1,3 @@
-/.next
-/node_modules
-/out
+/pages/_app.tsx
+/pages/_error.tsx
+/components/stripe/*
