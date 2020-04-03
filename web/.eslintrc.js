@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings'],
+  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings', 'airbnb', 'airbnb/hooks'],
   rules: {
     'object-curly-spacing': ['error', 'never']
   },
