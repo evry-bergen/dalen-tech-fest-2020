@@ -21,18 +21,19 @@ const reduceRoutes = (obj, route) => {
   const {_createdAt, _updatedAt} = page;
   const {includeInSitemap, disallowRobot} = route;
   const path = route.slug.current === '/' ? '/' : `/${route.slug.current}`;
-  const tmpObject = {...obj};
-  tmpObject[path] = {
-    query: {
-      slug: slug.current,
+  return {
+    ...obj,
+    [path]: {
+      query: {
+        slug: slug.current,
+      },
+      includeInSitemap,
+      disallowRobot,
+      _createdAt,
+      _updatedAt,
+      page: '/LandingPage',
     },
-    includeInSitemap,
-    disallowRobot,
-    _createdAt,
-    _updatedAt,
-    page: '/LandingPage',
   };
-  return tmpObject;
 };
 
 module.exports = withCSS({
