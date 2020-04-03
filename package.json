@@ -6,6 +6,7 @@
     "build": "lerna run build --parallel",
     "build-web": "lerna bootstrap && (cd web && npm run build)",
     "build-studio": "lerna bootstrap && (cd studio && npm run build)",
+    "build-storybook": "lerna bootstrap && (cd web && npm run build-storybook",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
     "graphql-deploy": "lerna run graphql-deploy",
