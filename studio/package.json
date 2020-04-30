@@ -5,7 +5,7 @@
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
-    "build": "sanity build",
+    "build": "sanity build && cp netlify.toml dist",
     "dev": "sanity start",
     "test": "sanity check"
   },
